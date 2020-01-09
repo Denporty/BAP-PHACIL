@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Altasia</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/main-style.css" />
+		<link rel="icon" href="images/favicon.ico" >
+	</head>
+	<body>
+	<style>
+
+	.test {
+		display: flex;
+	}
+
+	.hover:hover {
+		border-bottom: 1px solid gray;
+	}
+
+	</style>
+	
+	<div class="login-page">
+  <div class="form">
+  <p style="margin-top : -20px; font-size: 125%;"> <b> Ajouter un patient </b> </p>
+		<div class="test" style="justify-content: space-around;">
+		<a href="#" style="text-decoration : none; color: black;" onclick="switch_font()" class="font-size"><p class="hover"> Homme </p></a>
+		<a href="#" style="text-decoration : none; color: black;" class="font-size1" onclick="switch_fonte()"><p class="hover"> Femme </p></a>
+		</div>
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+	  <input type="password" placeholder="confirm-password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form">
+	<div class="test">
+	<input type="text" placeholder="nom" style="margin-right: 5px;"/>
+	<input type="text" placeholder="prenom"/>
+	</div>
+	<input type="text" placeholder="adresse"/>
+	<div class="test">
+	<input type="text" placeholder="code postal" style="margin-right: 5px;"/>
+	<input type="text" placeholder="ville"/>
+	</div>
+	<input type="text" placeholder="numero de medecin national"/>
+	<input type="tel" placeholder="numero de telephone"/>
+      <input type="text" placeholder="adresse e-mail"/>
+      <button>Enregistrer</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+	</body>
+</html>
