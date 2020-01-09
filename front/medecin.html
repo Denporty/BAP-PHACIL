@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Altasia</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="icon" href="images/favicon.ico" >
+	</head>
+	<body>
+	<style>
+
+	.test {
+		display: flex;
+	}
+
+	.hover:hover {
+		border-bottom: 1px solid gray;
+	}
+
+	</style>
+	
+	<div class="login-page">
+  <div class="form">
+  <p style="margin-top : -20px; font-size: 125%;"> <b> Inscription </b> </p>
+ 
+		<div class="test" style="justify-content: space-around;">
+		<a href="#" style="text-decoration : none; color: black; font-weight: 600;"><p style="border-bottom: 1px solid gray; "> Medecin </p></a>
+		<a href="pharma.html" style="text-decoration : none; color: black;"><p class="hover"> Pharmacien </p></a>
+		</div>
+
+    <form action="../back/inscriptionmed.php" name="enregitrement" class="login-form" method="POST">
+	<div class="test">
+	<input type="text" placeholder="nom" style="margin-right: 5px;" name="nom" id="nom"/>
+	<input type="text" placeholder="prenom"name="prenom" id="prenom"/>
+	</div>
+	<input type="text" placeholder="adresse" name="adresse" id="adresse"/>
+	<div class="test">
+	<input type="text" placeholder="code postal" style="margin-right: 5px;" name="postal" id="postal"/>
+	<input type="text" placeholder="ville" name="ville" id="ville"/>
+	</div>
+	<input type="number" placeholder="numero de medecin national" name="nummed" id="nummed"/>
+      <input type="text" placeholder="adresse e-mail" name="email" id="email"/>
+      <input type="password" placeholder="mot de passe" name="mdp" id="mdp"/>
+	  <input type="password" placeholder="confirmer le mot de passe" name="confirmmdp" id="confirmdp"/>
+      <button type="submit" name="inscription" value="Envoyer">connexion</button>
+      <p class="message">Deja enregistre ? <a href="connexion.html">Connectez-vous</a></p>
+    </form>
+  </div>
+</div>
+
+
+	</body>
+</html>

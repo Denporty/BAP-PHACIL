@@ -28,32 +28,25 @@
 		<a href="#" style="text-decoration : none; color: black;" onclick="switch_font()" class="font-size"><p class="hover"> Homme </p></a>
 		<a href="#" style="text-decoration : none; color: black;" class="font-size1" onclick="switch_fonte()"><p class="hover"> Femme </p></a>
 		</div>
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-	  <input type="password" placeholder="confirm-password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form">
+
+    <form action="../back/enrpatient.php" name="enregitrement" class="login-form" method="POST">
 	<div class="test">
-	<input type="text" placeholder="nom" style="margin-right: 5px;"/>
-	<input type="text" placeholder="prenom"/>
+	<input type="text" placeholder="nom" style="margin-right: 5px;" name="nom" id="nom"/>
+	<input type="text" placeholder="prenom" name="prenom" id="prenom"/>
 	</div>
-	<input type="text" placeholder="adresse"/>
+	<input type="text" placeholder="adresse" name="adresse" id="adresse"/>
 	<div class="test">
-	<input type="text" placeholder="code postal" style="margin-right: 5px;"/>
-	<input type="text" placeholder="ville"/>
+	<input type="text" placeholder="code postal" style="margin-right: 5px;" name="postal" id="postal"/>
+	<input type="text" placeholder="ville" name="ville" id="ville"/>
 	</div>
-	<input type="text" placeholder="numero de medecin national"/>
-	<input type="tel" placeholder="numero de telephone"/>
-      <input type="text" placeholder="adresse e-mail"/>
-      <button>Enregistrer</button>
+	<input type="text" placeholder="numero de medecin national" name="num_med" id="num_med"/>
+	<input type="tel" placeholder="numero de telephone" name="phone" id="phone"/>
+      <input type="text" placeholder="adresse e-mail" name="mail" id="mail"/>
+      <button type="submit" name="patient" value="Envoyer">Enregistrer</button>
     </form>
   </div>
 </div>
 
-<script src="js/script.js"></script>
+<script src="js/patient.js"></script>
 	</body>
 </html>

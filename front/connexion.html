@@ -5,7 +5,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/main-style.css" />
 		<link rel="icon" href="images/favicon.ico" >
 	</head>
 	<body>
@@ -15,17 +14,10 @@
 
   <div class="form">
   <p style="margin-top : -20px; font-size: 125%;"> <b> Connexion </b> </p>
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form">
-      <input type="text" placeholder="adresse e-mail"/>
-      <input type="password" placeholder="mot de passe"/>
-      <button>Se connecter</button>
+  <form action="../back/bddlog.php" name="enregitrement" class="login-form" method="POST">
+      <input type="text" placeholder="adresse e-mail" name="email" id="email"/>
+      <input type="password" placeholder="mot de passe" name="mdp" id="mdp"/>
+      <button type="submit" name="connexion" value="Envoyer">connexion</button>
       <p class="message">Pas encore enregistre ? <a href="medecin.html">Creer un compte</a></p>
     </form>
   </div>
