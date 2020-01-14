@@ -1167,6 +1167,9 @@ ol {
 .product-item .pi-pic {
 	overflow: hidden;
 	position: relative;
+	background-color: rgba(160,194,48,0.5);
+		border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 }
 
 .product-item .pi-pic img {
@@ -1240,6 +1243,7 @@ ol {
 .product-item .pi-text {
 	text-align: center;
 	padding-top: 26px;
+	background-color: rgba(159,179,164,0.4);
 }
 
 .product-item .pi-text .catagory-name {
