@@ -1,128 +1,303 @@
+
 <!doctype html>
+<html lang="en">
+  <head>
+    <title>JobBoard &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="css/custom-bs.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/line-icons/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
+	<link rel="stylesheet" href="css/style2.css">
+	<link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/search.css" type="text/css">
+    <script src="https://kit.fontawesome.com/401a3ba5be.js" crossorigin="anonymous"></script>
+    
 
-<html lang="fr">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">    
+  </head>
+  
+  <body id="top">
 
-    <head>
-        <?php include("../back/include/head.php"); ?>
-        <!-- Titre du site (onglet) -->
-        <title>Shop</title>
-    </head>
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+    
 
-    <body>
-                              <?php
+<div class="site-wrap">
 
-                              include('../back/config.php');
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
 
-                  $req = $bdd->query('SELECT * FROM ajout_medicament');
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="index.html"><img src="img/logo.png" style="width: 15%; display: flex; margin-top: 2%;"></a></div>
 
-                  // On affiche chaque entrée une à une
-                    foreach ($req as $donnees) {  
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about.html" class="active">About</a></li>
+              <li class="has-children">
+                <a href="job-listings.html">Job Listings</a>
+                <ul class="dropdown">
+                  <li><a href="job-single.html">Job Single</a></li>
+                  <li><a href="post-job.html">Post a Job</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href="services.html">Pages</a>
+                <ul class="dropdown">
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="service-single.html">Service Single</a></li>
+                  <li><a href="blog-single.html">Blog Single</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="portfolio-single.html">Portfolio Single</a></li>
+                  <li><a href="testimonials.html">Testimonials</a></li>
+                  <li><a href="faq.html">Frequently Ask Questions</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+              </li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li class="d-lg-none"><a href="post-job.html"><span class="mr-2"></span> Inscription</a></li>
+              <li class="d-lg-none"><a href="login.html">Connexion</a></li>
+            </ul>
+          </nav>
+          
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"></span>Inscription</a>
+              <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Connexion</a>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
 
-                  ?>
+        </div>
+      </div>
+    </header>
 
-                  <div class="card" style="width: 250px; max-height: auto;">
-                    
-                    <img src="../back/upload/<?php echo $donnees['photo']; ?>" class="card-img-top" style="max-height: 100px;" alt="...">
-                    
-                    <div class="card-body">
+    <!-- HOME -->
+    <section class="section-hero overlay inner-page bg-image"  id="home-section" style="background-color: #E1F8E5;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-black font-weight-bold">Commander</h1>
+            <div class="custom-breadcrumbs">
+              <a href="#">Accueil</a> <span class="mx-2 slash">/</span>
+              <span class="text-black"><strong>Commander</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                        <div class="text-center">
-                    
-                          <h5 class="card-title" style="color: black;"><?php echo $donnees["nom_medicament"]; ?></h5>
+    
 
-                          <p class="card-text" style="color: black;">Stock disponible : <?php 
-                          
-                          if ($donnees["stock"] == 0){
-                              echo "Epuisé";
-                          }
-                          else if($donnees["stock"] < 10){
-                              echo "Limité";
-                          }
-                          else{
-                            echo "En Stock";
-                        }
-                          
-                          
-                          
-                          
-                          ?></p>
 
-                          <p class="card-text" style="color: black;"><?php echo $donnees["categorie"]; ?></p>
-                          
-                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<?php echo $donnees['id']; ?>">Voir le contenu</button>
+	<section class="product-shop spad">
 
-                        </div>
-                    
+
+        <div class="container">
+
+            <div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="Selectionner un patient">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="Rechercher un produit">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
+                    <div class="filter-widget">
+                        <h4 class="fw-title">Categories</h4>
+                        <ul class="filter-catagories">
+                            <li><a href="#" class="test"><h7>Cardiologie</h7></a></li>
+                            <li><a href="#" class="test"><h7>Soins dentaire</h7></a></li>
+                            <li><a href="#" class="test"><h7>Optique</h7></a></li>
+                            <li><a href="#" class="test"><h7>Neurologie</h7></a></li>
+                            <li><a href="#" class="test"><h7>Respiratoire</h7></a></li>
+                        </ul>
                     </div>
-
                   </div>
 
-                    <!--modal-->
 
 
-                    <!-- Large modal -->
-                    
 
-                       <div class="modal fade" id="exampleModal<?php echo $donnees['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            
-                            <div class="modal-dialog" role="document">
-                                
-                                <div class="modal-content">
-                                    
-                                    <div class="modal-header">
-                                        
-                                        <h5 class="modal-title" id="exampleModalLabel" style="color: black"><?php echo $donnees["nom_medicament"]; ?></h5>
-                                        
-                                    
+
+                
+
+                <div class="col-lg-9 order-1 order-lg-2">
+                    <div class="product-list">
+                        <div class="row">
+
+                                                  <?php
+
+                          include('../back/config.php');
+
+                          $req = $bdd->query('SELECT * FROM ajout_medicament');
+
+                          // On affiche chaque entrée une à une
+                          foreach ($req as $donnees) {  
+
+                          ?>
+
+
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-item">
+                                    <div class="pi-pic">
+                                        <img src="../back/upload/<?php echo $donnees['photo']; ?>" alt="">
+
+                                        <?php if ($donnees["stock"] == 0){?>
+                                          <div class="sale pp-salee">Epuise</div>
+                                         <?php }
+                                          else if($donnees["stock"] < 10){?>
+                                              <div class="sale pp-saleee">Limité</div>
+                                         <?php }
+                                          else{?>
+                                              <div class="sale pp-sale">En stock</div>
+                                       <?php } ?>
+
+                                        <ul>
+                                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                        </ul>
                                     </div>
-                                    
-                                    <div class="modal-body">
-                                        
-                                    <img src="../back/upload/<?php echo $donnees['photo']; ?>" class="card-img-top" style="max-height: 100px;" alt="...">
-
-                                        <small> <i style="color: black">Stock disponible : <?php echo $donnees["stock"]; ?> </i> </small>
-
-                                        <hr>
-
-                                        <p style="color: black"> 
-
-                                            <?php echo $donnees["info"]; ?>
-                                            
-                                        </p>
-                                    
+                                    <div class="pi-text">
+                                        <div class="catagory-name"><?php echo $donnees['categorie']; ?></div>
+                                        <a href="#">
+                                            <h5><?php echo $donnees['nom_medicament']; ?></h5>
+                                        </a>
                                     </div>
-                                    
-                                    <div class="modal-footer">
-                                        
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ajouter</button>
-
-                                    </div>
-                                
                                 </div>
-
                             </div>
-
+                            <?php } ?>
                         </div>
 
-                  <?php
-                  
-                  }
+                      
 
-                  $req->closeCursor(); // Termine le traitement de la requête
 
-                  ?> 
 
+                    </div>
+                    <div class="loading-more">
+                        <i class="icon_loading"></i>
+                        <a href="#">
+                            Loading More
+                        </a>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-        </main>
 
-        <!-- FOOTER : Bas du site -->
-        <footer class="container">
-            
-            <?php include("../back/include/js.php"); ?>
 
-        </footer>
 
-    </body>
 
+    <footer class="site-footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Search Trending</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Graphic Design</a></li>
+              <li><a href="#">Web Developers</a></li>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">HTML5</a></li>
+              <li><a href="#">CSS3</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Company</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Support</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/stickyfill.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/quill.min.js"></script>
+    
+    
+    <script src="js/bootstrap-select.min.js"></script>
+    
+    <script src="js/custom.js"></script>
+   
+   
+  </body>
 </html>
