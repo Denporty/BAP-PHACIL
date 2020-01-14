@@ -1242,7 +1242,7 @@ ol {
 
 .product-item .pi-text {
 	text-align: center;
-	padding-top: 26px;
+	padding: 10px;
 	background-color: rgba(159,179,164,0.4);
 }
 
@@ -4328,12 +4328,11 @@ ol {
 	z-index: 1;
 	border-radius: 1em;
 	transition-duration: 0.2s;
-	background-position: center;
-	background-size: contain;
 	margin-bottom: 10%;
+	background-color: rgba(160,194,48,1);
 }
 h7 {
-	font-size:150%;
+	font-size:120%;
 	color: white;
 	font-weight: 600;
 	transition-duration: 0.3s;
@@ -4342,5 +4341,5 @@ h7 {
 
 .test:hover {
 	transform: scale(1.05);
-	background-color: rgba(183, 183, 183, 0.8);
+	background-color: rgba(160,194,48,0.5);
 }
