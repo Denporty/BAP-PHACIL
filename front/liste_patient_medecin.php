@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <body>
 
+<h2>Liste des patients</h2>
+
 <?php
 
 include('../back/config.php');
@@ -9,17 +11,20 @@ $req = $bdd->query('SELECT * FROM patient');
 
 foreach ($req as $donnees) {  ?>
 
-<form action="../back/suppr_patient.php" name="supprimer" class="login-form" method="POST">
+
 <div>
-<?php
+    
+<?php 
+
 echo $donnees["prenom"];
 
 echo " ";
 
 echo $donnees["nom"];
 
+
 ?>
-<input type="submit" name="supprimer" value="supprimer">
+<a href="../back/suppr_patient.php">Supprimer</a>
 
 </div>
 
@@ -30,6 +35,7 @@ echo $donnees["nom"];
 $req->closeCursor();
 
 ?> 
+
 
 
 

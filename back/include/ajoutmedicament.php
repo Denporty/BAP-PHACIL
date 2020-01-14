@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<?php include("include/head.php"); ?>
-		<title>Ajouter medicament</title>
-	</head>
 	<body>
         <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around;">
         
@@ -24,6 +20,16 @@
 									<label for="recipient-name" class="col-form-label">Nom du médicament</label>
 									<input type="text" class="form-control" id="nom_medicament" name="nom_medicament">
 								</div>
+								<select class="custom-select" id="inputGroupSelect01" name="categorie" required>
+                              
+                                <option selected>Choisir une categorie...</option>
+                                <option value="cardiologie">Cardiologie</option>
+                                <option value="soin dentaire">Soins Dentaire</option>
+                                <option value="optique">Optique</option>
+                                <option value="neurologie">Neurologie</option>
+								<option value="respiratoire">Respiratoire</option>
+                          
+                              </select>
 								<div >
 									<label for="recipient-name" class="col-form-label">Stock disponible</label>
 									<input type="text" class="form-control" id="stock" name="stock">
@@ -45,6 +51,6 @@
 					</div>
 				</div>
 			</div>
-			<?php include("include/js.php"); ?>
+			<?php include("js.php"); ?>
 		</body>
 	</html>

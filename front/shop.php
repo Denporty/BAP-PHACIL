@@ -30,7 +30,24 @@
                     
                           <h5 class="card-title" style="color: black;"><?php echo $donnees["nom_medicament"]; ?></h5>
 
-                          <p class="card-text" style="color: black;">Stock disponible : <?php echo $donnees["stock"]; ?></p>
+                          <p class="card-text" style="color: black;">Stock disponible : <?php 
+                          
+                          if ($donnees["stock"] == 0){
+                              echo "Epuisé";
+                          }
+                          else if($donnees["stock"] < 10){
+                              echo "Limité";
+                          }
+                          else{
+                            echo "En Stock";
+                        }
+                          
+                          
+                          
+                          
+                          ?></p>
+
+                          <p class="card-text" style="color: black;"><?php echo $donnees["categorie"]; ?></p>
                           
                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<?php echo $donnees['id']; ?>">Voir le contenu</button>
 
@@ -61,7 +78,7 @@
                                     
                                     <div class="modal-body">
                                         
-                                    <img src="upload/<?php echo $donnees['photo']; ?>" class="card-img-top" style="max-height: 100px;" alt="...">
+                                    <img src="../back/upload/<?php echo $donnees['photo']; ?>" class="card-img-top" style="max-height: 100px;" alt="...">
 
                                         <small> <i style="color: black">Stock disponible : <?php echo $donnees["stock"]; ?> </i> </small>
 

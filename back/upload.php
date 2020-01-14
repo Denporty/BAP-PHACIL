@@ -26,7 +26,8 @@
 	else{
         $nom_medicament = $_POST['nom_medicament'];
 		$stock = $_POST['stock'];
-        $info = $_POST['info'];
+		$info = $_POST['info'];
+		$categorie = $_POST['categorie'];
 
 		include 'config.php';
 
@@ -49,11 +50,12 @@
                     move_uploaded_file($_FILES["photo"]["tmp_name"], "upload/" . $_FILES["photo"]["name"]);
     
                     
-		$req = $bdd->prepare("INSERT INTO ajout_medicament (nom_medicament, stock, photo, info) VALUES (:nom_medicament, :stock, :photo, :info)");
+		$req = $bdd->prepare("INSERT INTO ajout_medicament (nom_medicament, stock, categorie, photo, info) VALUES (:nom_medicament, :stock, :categorie, :photo, :info)");
 
 		$req->execute(array(
 
 			'nom_medicament' => $nom_medicament,
+			'categorie' => $categorie,
 			'stock' => $stock,
 			'photo' => $filename,
             'info'=> $info,
