@@ -205,12 +205,6 @@
 
 
                     </div>
-                    <div class="loading-more">
-                        <i class="icon_loading"></i>
-                        <a href="#">
-                            Loading More
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
