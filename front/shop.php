@@ -24,7 +24,6 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">    
   </head>
-  
   <body id="top">
 
   <div id="overlayer"></div>
@@ -139,65 +138,64 @@
                     <div class="filter-widget">
                         <h4 class="fw-title">Categories</h4>
                         <ul class="filter-catagories">
-                            <li><a href="#" class="test"><h7>Cardiologie</h7></a></li>
-                            <li><a href="#" class="test"><h7>Soins dentaire</h7></a></li>
-                            <li><a href="#" class="test"><h7>Optique</h7></a></li>
-                            <li><a href="#" class="test"><h7>Neurologie</h7></a></li>
-                            <li><a href="#" class="test"><h7>Respiratoire</h7></a></li>
+                            <li><a href="#" class="test" style="background-image: url('img/button1.png');"><h7>Cardiologie</h7></a></li>
+                            <li><a href="#" class="test" style="background-image: url('img/button2.png');"><h7>Soins dentaire</h7></a></li>
+                            <li><a href="#" class="test" style="background-image: url('img/button3.png');"><h7>Optique</h7></a></li>
+                            <li><a href="#" class="test" style="background-image: url('img/button4.png');"><h7>Neurologie</h7></a></li>
+                            <li><a href="#" class="test" style="background-image: url('img/button5.png');"><h7>Respiratoire</h7></a></li>
                         </ul>
                     </div>
                   </div>
-
                 <div class="col-lg-9 order-1 order-lg-2">
                     <div class="product-list">
                         <div class="row">
+                        <?php
 
-                                                  <?php
+include('../back/config.php');
 
-                          include('../back/config.php');
+$req = $bdd->query('SELECT * FROM ajout_medicament');
 
-                          $req = $bdd->query('SELECT * FROM ajout_medicament');
+// On affiche chaque entrée une à une
+foreach ($req as $donnees) {  
 
-                          // On affiche chaque entrée une à une
-                          foreach ($req as $donnees) {  
-
-                          ?>
+?>
 
 
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="../back/upload/<?php echo $donnees['photo']; ?>" alt="">
+  <div class="col-lg-4 col-sm-6">
+      <div class="product-item">
+          <div class="pi-pic">
+              <img src="../back/upload/<?php echo $donnees['photo']; ?>" alt="">
 
-                                        <?php if ($donnees["stock"] == 0){?>
-                                          <div class="sale pp-salee">Epuise</div>
-                                         <?php }
-                                          else if($donnees["stock"] < 10){?>
-                                              <div class="sale pp-saleee">Limité</div>
-                                         <?php }
-                                          else{?>
-                                              <div class="sale pp-sale">En stock</div>
-                                       <?php } ?>
+              <?php if ($donnees["stock"] == 0){?>
+                <div class="sale pp-salee">Epuise</div>
+               <?php }
+                else if($donnees["stock"] < 10){?>
+                    <div class="sale pp-saleee">Limité</div>
+               <?php }
+                else{?>
+                    <div class="sale pp-sale">En stock</div>
+             <?php } ?>
 
-                                        <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name"><?php echo $donnees['categorie']; ?></div>
-                                        <a href="#">
-                                            <h5><?php echo $donnees['nom_medicament']; ?></h5>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php } ?>
+              <ul>
+                  <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+              </ul>
+          </div>
+          <div class="pi-text">
+              <div class="catagory-name"><?php echo $donnees['categorie']; ?></div>
+              <a href="#">
+                  <h5><?php echo $donnees['nom_medicament']; ?></h5>
+              </a>
+          </div>
+      </div>
+  </div>
+  <?php } ?>
                         </div>
-
-                      
-
-
-
+                    </div>
+                    <div class="loading-more">
+                        <i class="icon_loading"></i>
+                        <a href="#">
+                            Loading More
+                        </a>
                     </div>
                 </div>
             </div>
