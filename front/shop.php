@@ -148,12 +148,6 @@
                     </div>
                   </div>
 
-
-
-
-
-                
-
                 <div class="col-lg-9 order-1 order-lg-2">
                     <div class="product-list">
                         <div class="row">
