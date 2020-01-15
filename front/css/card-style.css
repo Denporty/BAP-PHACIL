@@ -147,6 +147,11 @@
 .block:hover .font-cool {
     color: black;
 }
-.font-cool {
-
+.fas {
+	font-size: 500%;
+	color:#8FA192;
+    transition-duration: 0.2s;
+}
+.block:hover .fas{
+    color: #89ba16;
 }
