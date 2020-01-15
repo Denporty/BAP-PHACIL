@@ -1,18 +1,28 @@
 <?php
 
-if(isset($_POST['supprimer'])){
+if(isset($_POST['id_patient'])){
 
- include("config.php");
+      $link = mysqli_connect("localhost", "root", "", "phacil"); 
 
-            $nom = $_GET["nom"];
-            $prenom = $_GET["prenom"];
+      $id=$_POST['id_patient'];
+  
+      if($link === false){ 
+          die("ERROR: Could not connect. " . mysqli_connect_error()); 
+      } 
+        
+      $sql = "DELETE FROM patient WHERE ID=$id"; 
+      if(mysqli_query($link, $sql)){ 
+          echo "Record was deleted successfully."; 
+      }  
+      else{ 
+          echo "ERROR: Could not able to execute $sql. "  
+                                         . mysqli_error($link); 
+      } 
+      mysqli_close($link);
+}
 
-            $req = $bdd->prepare("DELETE FROM patient WHERE nom = $nom and prenom = $prenom");
-
-            $req->execute();
-
-            echo "Patient supprimer";
-
-            }
+else {
+    echo "erreur";
+}
 
 ?>
