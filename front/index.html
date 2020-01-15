@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="fonts/line-icons/style.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/login.css" />
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">    
@@ -30,6 +31,8 @@
     </div>
   </div>
     
+
+	
 
 <div class="site-wrap">
 
@@ -76,14 +79,87 @@
               <li><a href="blog.html">Blog</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post a Job</a></li>
-              <li class="d-lg-none"><a href="login.html">Log In</a></li>
+              <li class="d-lg-none"><a>Connexion</a></li>
             </ul>
           </nav>
-          
+		  
+	<div class="login-page" id="myForm">
+
+  <div class="form">
+  <p style="margin-top : -20px; font-size: 125%;"> <b> Connexion </b> </p>
+  <form action="../back/bddlog.php" name="enregitrement" class="login-form" method="POST">
+      <input type="text" placeholder="adresse e-mail" name="email" id="email"/>
+      <input type="password" placeholder="mot de passe" name="mdp" id="mdp"/>
+      <button type="submit" name="connexion" value="Envoyer" onclick="closeForm()">Connexion</button>
+      <p class="message">Pas encore enregistre ? <a href="#" onclick="openForm1()">Creer un compte</a></p>
+    </form>
+  </div>
+</div>
+
+
+	<div class="login-pagedeux" id="myForm1">
+  <div class="form">
+  <p style="margin-top : -20px; font-size: 125%;"> <b> Inscription </b> </p>
+ 
+		<div class="test" style="justify-content: space-around;">
+		<a href="#" style="text-decoration : none; color: black; font-weight: 600;"><p style="border-bottom: 1px solid gray; " > Medecin </p></a>
+		<a href="#" style="text-decoration : none; color: black;"><p class="hover" onclick="openForm2()"> Pharmacien </p></a>
+		</div>
+
+    <form action="../back/inscriptionmed.php" name="enregitrement" class="login-form" method="POST">
+	<div class="test">
+	<input type="text" placeholder="nom" style="margin-right: 5px;" name="nom" id="nom"/>
+	<input type="text" placeholder="prenom"name="prenom" id="prenom"/>
+	</div>
+	<input type="text" placeholder="adresse" name="adresse" id="adresse"/>
+	<div class="test">
+	<input type="text" placeholder="code postal" style="margin-right: 5px;" name="postal" id="postal"/>
+	<input type="text" placeholder="ville" name="ville" id="ville"/>
+	</div>
+	<input type="number" placeholder="numero de medecin national" name="nummed" id="nummed"/>
+      <input type="text" placeholder="adresse e-mail" name="email" id="email"/>
+      <input type="password" placeholder="mot de passe" name="mdp" id="mdp"/>
+	  <input type="password" placeholder="confirmer le mot de passe" name="confirmmdp" id="confirmdp"/>
+      <button type="submit" name="inscription" value="Envoyer" onclick="closeForm1()">Connexion</button>
+      <p class="message">Deja enregistre ? <a href="#" onclick="openForm()">Connectez-vous</a></p>
+    </form>
+  </div>
+</div>
+
+<div class="login-pagetrois" id="myForm2">
+  <div class="form">
+  <p style="margin-top : -20px; font-size: 125%;"> <b> Inscription </b> </p>
+
+		<div class="test" style="justify-content: space-around;">
+		<a href="#" style="text-decoration : none; color: black;"><p class="hover" onclick="openForm1()"> Medecin </p></a>
+		<a href="#" style="text-decoration : none; color: black; font-weight: 600;"><p style="border-bottom: 1px solid gray;"> Pharmacien </p></a>
+		</div>
+
+	<form action="../back/inscriptionphar.php" name="enregitrement" class="login-form" method="POST">
+	<div class="test">
+	<input type="text" placeholder="nom" style="margin-right: 5px;" name="nom" id="nom"/>
+	<input type="text" placeholder="prenom" name="prenom" id="prenom"/>
+	</div>
+	<input type="text" placeholder="adresse" name="adresse" id="adresse"/>
+	<div class="test">
+	<input type="text" placeholder="code postal" style="margin-right: 5px;" name="postal" id="postal"/>
+	<input type="text" placeholder="ville" name="ville" id="ville"/>
+	</div>
+      <input type="text" placeholder="adresse e-mail" name="email" id="email"/>
+      <input type="password" placeholder="mot de passe" name="mdp" id="mdp"/>
+	  <input type="password" placeholder="confirmer le mot de passe" name="confirmmdp" id="confirmmdp"/>
+	  <button type="submit" name="inscription" value="Envoyer" onclick="closeForm2()">Connexion</button>
+      <p class="message">Deja enregistre ? <a href="#" onclick="openForm()">Connectez-vous</a></p>
+    </form>
+  </div>
+</div>
+		  
+		  
+		  
           <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
             <div class="ml-auto">
-              <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Post a Job</a>
-              <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Log In</a>
+              <a class="btn btn-outline-white border-width-2 d-none d-lg-inline-block" onclick="openForm1()"><span class="mr-2 icon-add"></span>Inscription</a>
+              <a class="btn btn-primary border-width-2 d-none d-lg-inline-block" onclick="openForm()"><span class="mr-2 icon-lock_outline"></span>Connexion</a>
             </div>
             <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
           </div>
@@ -278,6 +354,7 @@
     <script src="js/bootstrap-select.min.js"></script>
     
     <script src="js/custom.js"></script>
+	<script src="js/popup.js"></script>
 
      
   </body>
