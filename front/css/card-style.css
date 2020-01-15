@@ -1,0 +1,152 @@
+.service_area .single_service h3 {
+  font-size: 22px;
+  color: #001D38;
+  font-weight: 300;
+  margin-top: 35px;
+  margin-bottom: 23px;
+}
+
+/* line 34, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .single_service p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #727272;
+  line-height: 28px;
+  margin-bottom: 6px;
+}
+
+/* line 41, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .single_service a.learn_more {
+  color: #5DB2FF;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* line 46, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .single_service:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-color: transparent;
+}
+
+/* line 51, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .col-xl-4:nth-child(2) .single_service .service_icon {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00d363+0,37ef8d+100 */
+
+}
+
+/* line 60, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .col-xl-4:nth-child(3) .single_service .service_icon {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fd8e5e+0,fd8e5e+100 */
+
+}
+
+/* line 69, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .col-xl-4:nth-child(4) .single_service .service_icon {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#615cfd+0,d465ef+100 */
+
+  /* IE6-9 */
+}
+
+/* line 81, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .col-xl-4:nth-child(6) .single_service .service_icon {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a64eee+0,3c35ce+100 */
+
+}
+.service_area .single_service {
+  padding: 30px;
+  border: 1px solid #E8E8E8;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+
+/* line 13, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .single_service .service_icon {
+  line-height: 94px;
+  text-align: center;
+  width: 98px;
+  height: 98px;
+  margin: auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0181f5+0,5db2ff+100 */
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0181f5', endColorstr='#5db2ff',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 27, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .single_service h3 {
+  font-size: 22px;
+  color: #001D38;
+  font-weight: 300;
+  margin-top: 35px;
+  margin-bottom: 23px;
+}
+
+/* line 34, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .single_service p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #727272;
+  line-height: 28px;
+  margin-bottom: 6px;
+}
+
+/* line 41, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .single_service a.learn_more {
+  color: #5DB2FF;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* line 46, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .single_service:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-color: transparent;
+}
+
+/* line 51, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .col-xl-4:nth-child(2) .single_service .service_icon {
+
+}
+
+/* line 60, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .col-xl-4:nth-child(3) .single_service .service_icon {
+
+}
+
+/* line 69, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .col-xl-4:nth-child(4) .single_service .service_icon {
+
+}
+
+/* line 81, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
+.service_area .col-xl-4:nth-child(6) .single_service .service_icon {
+
+}
+
+.block {
+    background-color: rgba(159, 176, 164, 0.5);
+    transition-duration: 0.2s;
+    border-radius: 10px;
+}
+
+.block:hover {
+    transform: scale(1.07);
+}
+.block:hover .font-cool {
+    color: black;
+}
+.font-cool {
+
+}
