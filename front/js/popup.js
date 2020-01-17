@@ -3,6 +3,7 @@ function openForm() {
   document.getElementById("home-section").style.filter = "blur(20px)";
   document.getElementById("myForm1").style.display = "none";
   document.getElementById("myForm2").style.display = "none";
+  document.getElementById("gang").style.overflow = "hidden";
   
 }
 
@@ -10,6 +11,7 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
   document.getElementById("home-section").style.filter = "none";
+  document.getElementById("gang").style.overflow = "";
 }
 
 
@@ -18,6 +20,7 @@ function openForm1() {
   document.getElementById("home-section").style.filter = "blur(20px)";
   document.getElementById("myForm").style.display = "none";
   document.getElementById("myForm2").style.display = "none";
+  document.getElementById("gang").style.overflow = "hidden";
   
 }
 
@@ -25,12 +28,14 @@ function openForm1() {
 function closeForm1() {
   document.getElementById("myForm1").style.display = "none";
   document.getElementById("home-section").style.filter = "none";
+  document.getElementById("gang").style.overflow = "";
 }
 
 function openForm2() {
   document.getElementById("myForm2").style.display = "flex";
   document.getElementById("home-section").style.filter = "blur(20px)";
   document.getElementById("myForm1").style.display = "none";
+  document.getElementById("gang").style.overflow = "hidden";
   
 }
 
@@ -38,4 +43,5 @@ function openForm2() {
 function closeForm2() {
   document.getElementById("myForm2").style.display = "none";
   document.getElementById("home-section").style.filter = "none";
+  document.getElementById("gang").style.overflow = "";
 }
