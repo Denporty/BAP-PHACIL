@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 14 jan. 2020 à 09:34
+-- Généré le :  ven. 17 jan. 2020 à 09:01
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -37,16 +37,17 @@ CREATE TABLE IF NOT EXISTS `ajout_medicament` (
   `photo` varchar(255) NOT NULL,
   `info` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `ajout_medicament`
 --
 
 INSERT INTO `ajout_medicament` (`id`, `nom_medicament`, `categorie`, `stock`, `photo`, `info`) VALUES
-(4, 'Test 2', '', '8', 'medicaments.jpg', 'Deuxième test'),
-(3, 'Test 1', '', '0', 'test.jpg', 'Premier test'),
-(9, 'Test medicament', 'cardiologie', '50', 'iStock-521955107.jpg', 'gfukfyudkti');
+(4, 'Test 2', 'Neurologie', '25', 'medicaments.jpg', 'Deuxième test'),
+(3, 'Test 1', 'Neurologie', '0', 'test.jpg', 'Premier test'),
+(9, 'Test medicament', 'cardiologie', '30', 'iStock-521955107.jpg', 'gfukfyudkti'),
+(10, 'test 3', 'cardiologie', '3', 'test.jpg', 'qs');
 
 -- --------------------------------------------------------
 

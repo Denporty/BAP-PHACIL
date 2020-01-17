@@ -44,9 +44,7 @@
             
             if(in_array($filetype, $allowed)){
             
-                if(file_exists("upload/" . $_FILES["photo"]["name"])){
-                    echo $_FILES["photo"]["name"] . " existe déjà.";
-                } else{
+        
                     move_uploaded_file($_FILES["photo"]["tmp_name"], "upload/" . $_FILES["photo"]["name"]);
     
                     
@@ -70,12 +68,10 @@
             } else{
                 echo "Error: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer."; 
             }
-        } else{
-            echo "Error: " . $_FILES["photo"]["error"];
         }
     }
 
-	}
+	
 
 
 		

@@ -51,7 +51,7 @@ foreach ($req as $donnees) {  ?>
 
 
 
-<button type="submit" name="id_patient" value="<?php echo $donnees['id'];?>" class="Bootstrap">Confirmation</button>
+<button type="submit" name="id_medicament" value="<?php echo $donnees['id'];?>" class="Bootstrap">Confirmation</button>
 
 </form>
 
